@@ -1,0 +1,83 @@
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+$primary-font: Varela, sans-serif;
+
+
+
+
+
+
+@font-face {
+  font-family: 'Varela';
+  src: url('./fonts/VarelaRound-Regular.otf') format('truetype');
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+#header {
+  width: 100%;
+  min-height: 700px;
+  background-image: url('./img/header-img.jpeg');
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  font-family: $primary-font;
+
+  #nav {
+    #logo {
+      float: left;
+      height: 90px;
+      width: 330px;
+      margin: 20px;
+    }
+
+    ul {
+      float: right;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin: 30px 20px;
+        font-size: .75em;
+        font-weight: 400;
+        letter-spacing: 2px;
+
+        & :hover {
+          color: black;
+        }
+      }
+
+      li:nth-child(3) {
+        border: 1px solid white;
+        padding: 15px;
+
+        & :hover {
+          padding: 0px;
+          background-color: white;
+          border: none;
+
+        }
+      }
+
+    }
+
+    h1 {
+      color: white;
+      clear: both;
+      letter-spacing: 5px;
+      @include centerer;
+
+    }
+
+
+  }
+}

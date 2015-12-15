@@ -1,3 +1,5 @@
+@import 'grid';
+
 @mixin centerer {
   position: absolute;
   top: 50%;
@@ -5,10 +7,13 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin centerit {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 $primary-font: Varela, sans-serif;
-
-
-
+$small-font-color: #5bb35b;
 
 
 
@@ -67,9 +72,7 @@ a {
 
         }
       }
-
     }
-
     h1 {
       color: white;
       clear: both;
@@ -77,7 +80,27 @@ a {
       @include centerer;
 
     }
-
-
   }
+}
+
+.row {
+  text-align: center;
+  font-family: 'Varela';
+  letter-spacing: 3px;
+  padding: 75px;
+  @include centerit;
+
+  h4 {
+    width: 90%;
+    color: $small-font-color;
+    letter-spacing: 5px;
+    @include centerit;
+  }
+
+}
+
+.divider {
+  width: 70%;
+  @include centerit;
+  border: 1px solid lightgray;
 }

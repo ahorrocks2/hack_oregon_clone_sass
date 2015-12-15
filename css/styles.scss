@@ -97,6 +97,20 @@ a {
     @include centerit;
   }
 
+  img {
+    margin: 40px;
+  }
+
+  .button {
+    padding: 10px 8px;
+    width: 170px;
+    background-color: rgb(61, 112, 199);
+    color: white;
+    font-size: .7em;
+    border-radius: 5px;
+    @include centerit;
+  }
+
 }
 
 .divider {
